@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D blockCheck = Raycast(new Vector2(footOffset*direction, playerHeight), grabDir, grabDistance, groundLayer);
         RaycastHit2D wallCheck = Raycast(new Vector2(footOffset * direction, eyeHeight), grabDir, grabDistance, groundLayer);
         RaycastHit2D ledgeCheck = Raycast(new Vector2(reachOffset * direction, playerHeight), Vector2.down, grabDistance, groundLayer);
-        if(!isOnGround && rb.velocity.y < 0f && ledgeCheck && wallCheck && !blockCheck)
+        if(!isOnGround && rb.velocity.y < 0f && ledgeCheck && wallCheck && !blockCheck && !rightCheck && !leftCheck)
         {
             Vector3 pos = transform.position;
             pos.x += (wallCheck.distance - 0.05f) * direction;
