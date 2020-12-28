@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     static AudioManager current;
 
+    public AudioClip doorFXClip;
+
     public AudioClip orbFxClip;
     public AudioClip orbVoiceClip;
 
@@ -32,6 +34,11 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        if(current != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         current = this;
         DontDestroyOnLoad(gameObject);
         ambientSource = gameObject.AddComponent<AudioSource>();
@@ -53,6 +60,11 @@ public class AudioManager : MonoBehaviour
         current.musicSource.Play();
     }
 
+    public static void PlayDoorOpenAudio()
+    {
+        current.fxSource.clip = current.doorFXClip;
+        current.fxSource.PlayDelayed(1.1f);
+    }
 
     public static void PlyerFootStepAudio()
     {

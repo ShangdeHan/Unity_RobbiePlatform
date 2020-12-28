@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4192973702651462}
   - component: {fileID: 198033214111539964}
   - component: {fileID: 199748661511350242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4603,7 +4603,7 @@ GameObject:
   - component: {fileID: 4321395113756110}
   - component: {fileID: 198856645028733576}
   - component: {fileID: 199869369697428546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9177,7 +9177,7 @@ GameObject:
   - component: {fileID: 4992983760354188}
   - component: {fileID: 198642175945002916}
   - component: {fileID: 199559438508689500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow outer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13769,7 +13769,7 @@ GameObject:
   - component: {fileID: 4324071311801414}
   - component: {fileID: 61439923041099976}
   - component: {fileID: 212397358105785492}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Shrine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13877,7 +13877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4297243588508022}
   - component: {fileID: 108753039444731672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13970,7 +13970,7 @@ GameObject:
   - component: {fileID: 4900698782198652}
   - component: {fileID: 198265010508008832}
   - component: {fileID: 199621577845317548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18565,7 +18565,7 @@ GameObject:
   - component: {fileID: 95902566937892156}
   - component: {fileID: 7310499364844021243}
   - component: {fileID: 2068078386774718568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}

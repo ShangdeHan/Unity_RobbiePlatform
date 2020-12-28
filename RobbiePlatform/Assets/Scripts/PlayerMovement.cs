@@ -64,16 +64,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-            jumpPressed = true;
+        if (GameManager.GameOver()) return;
+        if (Input.GetButtonDown("Jump")) jumpPressed = true;
         jumpHeld = Input.GetButton("Jump");
         crouchHeld = Input.GetButton("Crouch");
         crouchPressed = Input.GetButtonDown("Crouch");
     }
     private void FixedUpdate()
     {
-        if (isJump)
-            jumpPressed = false;
+        if (GameManager.GameOver()) return;
+        if (isJump) jumpPressed = false;
         PhysicsCheck();
         GroundMovement();
         MidAirMovement();
