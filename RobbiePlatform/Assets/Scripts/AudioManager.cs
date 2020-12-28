@@ -7,6 +7,14 @@ public class AudioManager : MonoBehaviour
 {
     static AudioManager current;
 
+    public AudioClip orbFxClip;
+    public AudioClip orbVoiceClip;
+
+
+    public AudioClip deathFXClip;
+    public AudioClip deathClip;
+    public AudioClip deathVoiceClip;
+
     public AudioClip ambientClip;
     public AudioClip musicClip;
 
@@ -65,6 +73,24 @@ public class AudioManager : MonoBehaviour
         current.playerSource.clip = current.jumpClip;
         current.playerSource.Play();
         current.voiceSource.clip = current.jumpVoiceClip;
+        current.voiceSource.Play();
+    }
+
+    public static void playDeathAudio()
+    {
+        current.playerSource.clip = current.deathClip;
+        current.playerSource.Play();
+        current.voiceSource.clip = current.deathVoiceClip;
+        current.voiceSource.Play();
+        current.fxSource.clip = current.deathFXClip;
+        current.fxSource.Play();
+    }
+
+    public static void playOrbAudio()
+    {
+        current.fxSource.clip = current.orbFxClip;
+        current.fxSource.Play();
+        current.voiceSource.clip = current.orbVoiceClip;
         current.voiceSource.Play();
     }
 }
