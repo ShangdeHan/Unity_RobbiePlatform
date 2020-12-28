@@ -157,7 +157,8 @@ public class PlayerMovement : MonoBehaviour
             if (jumpPressed)
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
-                rb.velocity = new Vector2(rb.velocity.x, hangingJumpForce);
+                if(isOnGround) rb.velocity = new Vector2(rb.velocity.x, 5f);
+                else rb.velocity = new Vector2(rb.velocity.x, hangingJumpForce);
                 isHanging = false;
             }
             if (crouchPressed)

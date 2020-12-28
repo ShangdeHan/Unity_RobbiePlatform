@@ -7,6 +7,9 @@ public class AudioManager : MonoBehaviour
 {
     static AudioManager current;
 
+    public AudioClip winClip;
+    public AudioClip startLevelClip;
+
     public AudioClip doorFXClip;
 
     public AudioClip orbFxClip;
@@ -58,6 +61,16 @@ public class AudioManager : MonoBehaviour
         current.musicSource.clip = current.musicClip;
         current.musicSource.loop = true;
         current.musicSource.Play();
+
+        current.fxSource.clip = current.startLevelClip;
+        current.fxSource.Play();
+    }
+
+    public static void PlayerWonAudio()
+    {
+        current.fxSource.clip = current.winClip;
+        current.fxSource.Play();
+        current.playerSource.Stop();
     }
 
     public static void PlayDoorOpenAudio()
