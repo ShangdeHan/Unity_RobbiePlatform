@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask groundLayer;
 
-    float xVelocity;
+    public float xVelocity;
 
     //Collider size
     Vector2 colliderStandSize;
@@ -128,11 +128,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(xVelocity < 0)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         if (xVelocity > 0)
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(jumpPressed && isOnGround && !isJump && !isHeadBlocked)
         {
-            if(isCrouch && isOnGround)
+            if(isCrouch)
             {
                 StandUp();
                 rb.AddForce(new Vector2(0f, courchJumpBoot), ForceMode2D.Impulse);
@@ -177,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
             isJump = true;
             jumpTime = Time.time + jumpHoldDuration;
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            AudioManager.playJumpAudio();
         }else if (isJump)
         {
             if (jumpHeld)
